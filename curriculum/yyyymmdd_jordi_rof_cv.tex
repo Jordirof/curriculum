@@ -1,0 +1,207 @@
+% Jordi Rof (2025)
+
+\documentclass[11pt, a4paper]{article}
+
+% Call packages
+\usepackage[T1]{fontenc}     % We are using pdfLaTeX,
+\usepackage[utf8]{inputenc}  % hence this preparation
+\usepackage[british]{babel}  
+\usepackage[left = 0mm, right = 0mm, top = 0mm, bottom = 0mm]{geometry}
+\usepackage[stretch = 25, shrink = 25, tracking=true, letterspace=30]{microtype}  
+\usepackage{graphicx}        % To insert pictures
+\usepackage{xcolor}          % To add colour to the document
+\usepackage{marvosym}        % Provides icons for the contact details
+\usepackage{fontawesome}     % To source linkedin logo
+\usepackage{ragged2e}
+\usepackage{enumitem}     % To redefine spacing in lists
+\setlist{parsep = 0pt, topsep = 0pt, partopsep = 1pt, itemsep = 1pt, leftmargin = 6mm}
+\usepackage[sfdefault]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font
+\usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
+
+% Base blue color for headers and lhs column (a bit lighter)
+% https://www.colorhexa.com/254768
+\definecolor{cvblue}{RGB}{50,97,142}
+
+% Avoid excessive hyphenation
+\hyphenpenalty=7500
+
+%%%%%% USER COMMAND DEFINITIONS AND REDEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
+\newcommand{\dates}[1]{\hfill\mbox{\textbf{#1}}} % Bold stuff that does not got broken into lines
+\newcommand{\is}{\par\vskip.5ex plus .4ex} % Item spacing
+\newcommand{\issmaller}{\par\vskip.2ex plus .2ex}
+\newcommand{\smaller}[1]{{\small$\diamond$\ #1}}
+\newcommand{\headleft}[1]{\vspace*{3ex}\textsc{\textbf{#1}}\par
+    \vspace*{-1.5ex}\hrulefill\par\vspace*{0.7ex}}
+\newcommand{\headright}[1]{\vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par
+     \vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
+\newcommand{\titlejob}[3]{ % Position / company / dates
+		\textbf{\textsc{#1}, \textit{#2}} \dates{#3}\\}
+\newcommand{\titleedu}[4]{ %  Degree / Program / dates / university
+		\textbf{\textsc{#1} {#2}} \dates{#3}\\
+		\textit{#4}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Style definitions -- killing the unnecessary space and adding the skips explicitly
+\setlength{\topskip}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\fboxsep}{0pt}
+\pagestyle{empty}
+\raggedbottom
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% LHS column begins here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{0.33\textwidth}
+
+%  LHS column top rectangle (remove !90 to darken)
+\colorbox{cvblue!90}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+
+\vspace{-.2ex} % Eliminates the small gap
+\colorbox{cvblue!90}{\color{white} % LEFT BOX OPEN
+\kern0.09\textwidth\relax  % Left margin provided explicitly
+\begin{minipage}[t][293mm][t]{0.82\textwidth}
+\raggedright
+\vspace*{2.5ex}
+
+% Name and presentation
+\Huge \textbf{Jordi Rof}
+\Large \textbf{Quantitative economist \& manager}
+\normalsize 
+
+% Separation
+\vspace*{2.5ex}  
+
+\begin{minipage}{\textwidth}    
+Professional with 10+ years of experience in financial and energy sectors. Proven leader in model development, scenario design, risk methodologies and statistical modeling. Passionate about applying data-driven strategies to drive business performance and resilience. Demonstrated experience in building and leading highly efficient and result-oriented teams. 
+\end{minipage}
+
+\headleft{Contact}
+%\small % To fit more content
+\makebox[1.5em][c]{\faMapMarker} Edinburgh \\[0.4ex]
+\makebox[1.5em][c]{\faEnvelope}  jordi.rof@barcelonagse.eu \\[0.4ex]
+\makebox[1.5em][c]{\faPhone} +44 7495443560 \\[0.4ex]
+\makebox[1.5em][c]{\faLinkedinSquare} \href{https://www.linkedin.com/in/jordirof/}{linkedin.com/in/jordirof/} \\[0.1ex]
+\normalsize
+
+% Soft skills
+\headleft{Soft skills}
+\begin{itemize}
+\item Team building
+\item Work planning
+\item KPI \& OKR definition
+\item Project management
+\item Stakeholder engagement
+\item Conflict resolution
+\end{itemize} 
+
+% Hard skills
+\headleft{Hard skills}
+\begin{itemize}
+\item Economic analysis
+\item Scenario design
+\item Risk management
+\item Forecasting
+\item Econometrics
+\item Statistical modeling
+\item Data management
+\end{itemize} 
+
+% Software 
+\headleft{Software}
+\begin{itemize}
+\item Programming: R, Python, SQL, Matlab
+\item Tools: Docker, GCP, Git, JIRA, LaTeX, MS Office, VBA
+\end{itemize} 
+
+% Languages
+\headleft{Languages}
+\begin{itemize}
+\item Catalan (native)
+\item English (fluent)
+\item Spanish (fluent)
+\item Polish (basic)
+\end{itemize} 
+
+\end{minipage}%
+\kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colourbox
+}  % LEFT BOX CLOSE
+\end{minipage} % Right column
+\hskip2.5em % Left margin for the white area
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% RHS column begins here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{0.56\textwidth}
+\setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+
+\vspace{2ex}
+
+\headright{\textbf{Experience}}
+\small
+
+\titlejob{Senior economist}{Enoda}{2023-present}
+\begin{itemize}
+	\vspace*{-\baselineskip}
+	\item Lead a multidisciplinary team of data scientists, econometricians and data engineers to develop and maintain bidding strategy models and related infrastructure (databases, APIs, cloud production environments). 
+	\item Plan the book of work, KPIs and OKRs of the economics department. Design processes and policies to ensure quality, consistency and auditability of work in the team and the firm. 
+	\item Advise senior management on revenue generation strategies and financial planning. Provide training about economics, electricity markets and project management to Enoda employees. 
+	\item Forecast key variables for the business, such as electricity market variables, interest rates, price indexes and commodity prices. 
+	\item Design data processes to handle large data sets (including extraction, quality control and storage) achieving full automation. 
+	\item Develop microeconomic models of energy markets to forecast firm revenue under different scenarios.
+\end{itemize}
+
+\titlejob{Scenario methodology \& risk dept. local lead}{UBS}{2018-2023}
+\small{
+\begin{itemize}
+	\vspace*{-\baselineskip}
+	\item Led a team of 8 economists and programmers to develop macroeconomic scenario generation methodologies. 
+	\item Managed the development of critical regulatory scenarios with 100\% regulatory approval rate (FINMA, CCAR, EBA and MAS) and the first climate change scenarios in UBS. 
+	\item Led the creation of scenario design infrastructure, achieving major efficiency gains, reducing operational risk and automating audit trails. 
+	\item Served as local lead for the Risk Methodology department in Poland, with more than 100 employees. The responsibilities included implementing critical initiatives for the department (e.g. remote work planning), conflict resolution, supporting hiring and improving employee satisfaction.
+\end{itemize}
+}
+
+\titlejob{Quantitative economist}{UBS}{2016-2018}
+\small{
+\begin{itemize}
+	\vspace*{-\baselineskip}
+	\item Developed and monitored econometric models to project macroeconomic and financial variables for scenario expansion. This included a model to compute scenario probabilities using density forecasting. Achieved 100\% approval rate with timely submissions. 
+	\item Played a key role in scenario design, including IFRS9 (upside, baseline, downside) and capital adequacy scenarios. 
+	\item Designed governance processes to identify material risks and select relevant scenario narratives for IFRS9 involving senior management and portfolio underwriters.
+\end{itemize}
+}
+
+\titlejob{Economic analyst}{Asiya Investments}{2014-2016}
+\small{
+\begin{itemize}
+	\vspace*{-\baselineskip}
+	\item Created economic research (e.g. country reports, financial updates). 
+	\item Led the creation of nowcasting models for GDP (mixed-frequency). 
+	\item Periodically published articles about economics in Arabic media.
+\end{itemize}
+}
+
+\titlejob{esearch assistant}{Caixabank}{2012-2013}
+\small{
+\begin{itemize}
+	\vspace*{-\baselineskip}
+	\item Monitored and analyzed developments in the European financial system with the objective of briefing senior economists.
+	\item Estimated statistical and econometric models for analysis and forecasting financial variables, mainly GDP, inflation and interest rates to be used in the capital plan of the bank.
+\end{itemize}
+}
+
+\headright{\textbf{Education}}
+
+\titleedu{MSc}{Macroeconomic policy and financial markets}{2011--2012}{Barcelona School of Economics (BSE)}
+\is
+\titleedu{BSc}{Economics}{2009--2011}{Universitat Aut\`{o}noma de Barcelona}
+\is
+\titleedu{BSc}{Business administration}{2004--2009}{Universitat Aut\`{o}noma de Barcelona}
+
+\normalsize
+\end{minipage}
+
+\end{document}
