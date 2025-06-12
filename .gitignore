@@ -1,3 +1,6 @@
+## Folders with compiled documents
+curriculum/compiled/
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
