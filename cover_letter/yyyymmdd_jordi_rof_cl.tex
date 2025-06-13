@@ -1,0 +1,109 @@
+% Jordi Rof (2025)
+
+\documentclass[11pt, a4paper]{article}
+
+% Call packages
+\usepackage[T1]{fontenc}     % We are using pdfLaTeX,
+\usepackage[utf8]{inputenc}  % hence this preparation
+\usepackage[british]{babel}  
+\usepackage[left = 0mm, right = 0mm, top = 0mm, bottom = 0mm]{geometry}
+\usepackage[stretch = 25, shrink = 25, tracking=true, letterspace=30]{microtype}  
+\usepackage{graphicx}        % To insert pictures
+\usepackage{xcolor}          % To add colour to the document
+\usepackage{marvosym}        % Provides icons for the contact details
+\usepackage{fontawesome}     % To source linkedin logo
+\usepackage{ragged2e}
+\usepackage{enumitem}     % To redefine spacing in lists
+\setlist{parsep = 0pt, topsep = 0pt, partopsep = 1pt, itemsep = 1pt, leftmargin = 6mm}
+\usepackage[sfdefault]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font
+\usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
+\usepackage{lipsum}
+
+% Base blue color for headers and lhs column (a bit lighter)
+% https://www.colorhexa.com/254768
+\definecolor{cvblue}{RGB}{50,97,142}
+
+% Avoid excessive hyphenation
+\hyphenpenalty=7500
+
+%%%%%% USER COMMAND DEFINITIONS AND REDEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\headleft}[1]{\vspace*{3ex}\textsc{\textbf{#1}}\par
+    \vspace*{-1.5ex}\hrulefill\par\vspace*{0.7ex}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Style definitions -- killing the unnecessary space and adding the skips explicitly
+\setlength{\topskip}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\fboxsep}{0pt}
+\pagestyle{empty}
+\raggedbottom
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% LHS column begins here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{0.33\textwidth}
+
+%  LHS column top rectangle (remove !90 to darken)
+\colorbox{cvblue!90}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+
+\vspace{-.2ex} % Eliminates the small gap
+\colorbox{cvblue!90}{\color{white} % LEFT BOX OPEN
+\kern0.09\textwidth\relax  % Left margin provided explicitly
+\begin{minipage}[t][293mm][t]{0.82\textwidth}
+\raggedright
+\vspace*{2.5ex}
+
+% Name and presentation
+\Huge \textbf{Jordi Rof}
+\Large \textbf{Quantitative economist \& manager}
+\normalsize 
+
+% Separation
+\vspace*{2.5ex}  
+
+\headleft{Contact}
+%\small % To fit more content
+\makebox[1.5em][c]{\faMapMarker} Edinburgh \\[0.4ex]
+\makebox[1.5em][c]{\faEnvelope}  jordi.rof@barcelonagse.eu \\[0.4ex]
+\makebox[1.5em][c]{\faPhone} +44 7495443560 \\[0.4ex]
+\makebox[1.5em][c]{\faLinkedinSquare} \href{https://www.linkedin.com/in/jordirof/}{linkedin.com/in/jordirof/} \\[0.1ex]
+\normalsize
+
+\end{minipage}%
+\kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colourbox
+}  % LEFT BOX CLOSE
+\end{minipage} % Right column
+\hskip2.5em % Left margin for the white area
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% RHS column begins here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{0.56\textwidth}
+\setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+
+\bigskip
+\bigskip
+
+
+Dear hiring manager,
+
+\bigskip
+\bigskip
+\bigskip
+
+\lipsum[1-4]
+
+\bigskip
+\bigskip
+\bigskip
+
+Kind regards,\\
+Jordi Rof
+
+
+\normalsize
+\end{minipage}
+
+\end{document}
